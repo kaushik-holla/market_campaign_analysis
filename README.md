@@ -105,7 +105,7 @@ The classification report provides detailed metrics on the performance of the cl
 weighted avg       0.94      0.69      0.78      3979
 ```
 
-##### Classification model Conclusion:
+### Classification model Conclusion:
 
 1. Metric: <br>
     From the dataset, we observed that only about 5% of the individuals are donors. To ensure that our mailing campaign effectively reaches these potential donors, I prioritized recall as our primary evaluation metric.
@@ -127,7 +127,7 @@ The regression task aimed to predict future donations over different time period
 18-months: MSE = 2958108.4606587244, R2 = -0.2996013075000741
 24-months: MSE = 2821463.0745740645, R2 = -0.008328069304253782
 ```
-##### Regression model Conclusion:
+### Regression model Conclusion:
 
 1. High MSE Values: <br>
     The high MSE values indicate that the predicted donation amounts are significantly deviating from the actual donation amounts. This suggests that the models are not accurately capturing the patterns in the data to make precise predictions.
