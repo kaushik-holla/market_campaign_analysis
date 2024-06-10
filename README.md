@@ -122,7 +122,7 @@ weighted avg       0.94      0.69      0.78      3979
 The regression task aimed to predict future donations over different time periods (6, 12, 18, and 24 months) based on historical donor data and various features.
 
 ```mathematica
-6-months : MSE = 157799.96906646877, R2 = -0.30142331260039
+'6-months' : MSE = 157799.96906646877, R2 = -0.30142331260039
 12-months: MSE = 1274562.6688466398, R2 = -0.12804561817273719
 18-months: MSE = 2958108.4606587244, R2 = -0.2996013075000741
 24-months: MSE = 2821463.0745740645, R2 = -0.008328069304253782
