@@ -24,9 +24,8 @@ This repository contains the analysis and predictive modeling of marketing campa
 ## Folder Structure
 - `data/`: Contains the datasets.
 - `notebooks/`: Contains Jupyter Notebooks for each step of the analysis.
-- `scripts/`: Contains .py scripts used for data processing, analysis and building predictive models.
 - `models/`: Contains saved models.
-- `results/`: Contains generated figures and results from the analysis.
+
 
 ## Data Description
 
@@ -122,7 +121,7 @@ weighted avg       0.94      0.69      0.78      3979
 The regression task aimed to predict future donations over different time periods (6, 12, 18, and 24 months) based on historical donor data and various features.
 
 ```mathematica
-'6-months' : MSE = 157799.96906646877, R2 = -0.30142331260039
+6-months : MSE = 157799.96906646877, R2 = -0.30142331260039
 12-months: MSE = 1274562.6688466398, R2 = -0.12804561817273719
 18-months: MSE = 2958108.4606587244, R2 = -0.2996013075000741
 24-months: MSE = 2821463.0745740645, R2 = -0.008328069304253782
@@ -139,3 +138,50 @@ The regression task aimed to predict future donations over different time period
     The regression models, as they currently stand, are ineffective for predicting future donations. The high MSE and negative R² scores suggest that the currently used models are not able to capture the underlying relationships between the features and the target variables.
 
 ## Recommendations for Improvement
+
+1. Data Prep:
+    Imputation techniques: 
+        In Data Prep, more sophisticated imputation techniques can be tried like imputation based on predictive modeling etc. <br>
+    Feature Engineering: 
+        Explore additional feature engineering steps to create more informative features.
+
+2. Classification Model:
+    Several things can be tried out for classification model to increase the performance. 
+
+    1. Handling Class Imbalance:
+        1. Resampling Techniques: 
+            Combination of different resampling techniques could have been tried to balance the class distribution.
+        
+        2. Class Weight Adjustment: 
+            Different class weights can be tried in the classification algorithm to give more importance to the minority class (donors).
+
+    2. Hyperparameter Tuning
+        hyperparameter tuning like GridSearchCV or RandomizedSearchCV can be tried to find the optimal parameters for the classification model.
+
+    3. Model Selection:
+        1. Ensemble Methods: 
+            Ensemble methods combining the predictions from multiple models could have been tried to see if it gives better results. 
+        
+        2. Different Algorithms:
+            Catboost or Neural Networks can be tried to see if it improves the performance of the model. 
+
+    4. Post Processing:
+        Differnt techniques like adjust the decision threshold to optimize the balance between precision and recall or improve recall further can be tried. 
+
+3. Regression Model: 
+    Given the model prediction being significantly deviating, there are several key recommendations and improvements that can be made to enhance the predictive performance and overall robustness of the models.
+    
+    1. Create New Features: 
+        Explore new features that could better capture the relationship between donors and donation amounts and trim the existing features using techniques like recursive feature elimination or getting feature importance score from tree based models.  
+
+    2. Hyperparameter Tuning: 
+        Can Perform a more comprehensive grid search or random search to explore a wider range of hyperparameters for the regression models. 
+
+    3. Model Selection: Two things could be tried here
+        1. Try Different Algorithms: 
+            Experiment with different regression algorithms such as Random Forest Regressor, Gradient Boosting Regressor, Catboost model etc. Comparing multiple models can help identify the best-performing algorithm for this specific problem.
+        
+        2. Ensemble Methods: 
+            Combine multiple models to create an ensemble model that can leverage the strengths of different algorithms and improve overall performance. (Building soft Voting Classifier)
+
+
