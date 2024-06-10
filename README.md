@@ -10,8 +10,7 @@ This repository contains the analysis and predictive modeling of marketing campa
 - [Usage](#usage)
 - [Models and Techniques](#models-and-techniques)
 - [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 <b>Problem Statement:</b> Effectively Identifying Donors for mailing campaigns and forecast/predict the expected total donations receivable from these campaigns <br>
@@ -52,4 +51,43 @@ cd market_campaign_analysis
 ```bash
 python -m venv venv
 source venv/bin/activate 
+```
+
+3. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+
+## Models and Techniques
+### Classification
+
+XGBoost Classifier: Used to classify donors and non-donors with a focus on maximizing recall.
+SMOTE and Downsampling: Techniques used to handle class imbalance.
+
+### Regression
+XGBoost Regressor: Used to predict the amount of donations over different periods (6, 12, 18, and 24 months).
+GridSearchCV: Hyperparameter tuning to improve model performance.
+
+## Results
+The results of the classification and regression models, including evaluation metrics like precision, recall, F1-score, MSE, and R² score, are documented in the respective Jupyter notebooks and the results section of the project.
+
+## Classification Report
+
+### Example of a Classification Report
+
+The classification report provides detailed metrics on the performance of the classification model. The metrics include precision, recall, F1-score, and support for each class. Below is an example of a classification report generated from the model:
+
+```mathematica
+              Precision    Recall  F1-score   Support
+
+           0       0.98      0.69      0.81      3782
+           1       0.12      0.79      0.20       197
+
+    accuracy                           0.69      3979
+   macro avg       0.55      0.74      0.51      3979
+weighted avg       0.94      0.69      0.78      3979
 ```
